@@ -19,7 +19,12 @@ public By logoYandex = By.xpath(".//img[@alt='Yandex']");
 public By logoScooter = By.xpath(".//img[@alt='Scooter']");
 
 //пункты списка
-public By footerOrderButton = By.xpath(".//div[@data-accordion-component='AccordionItem'][1]");
+public By footerListPoints = By.xpath(".//div[@data-accordion-component='AccordionItem']");
+public By footerList = By.xpath(".//div[@class='Home_FAQ__3uVm4']");
+public By footerListVisibleTextAfterClick = By.xpath(".//div[not(@hidden)and@data-accordion-component='AccordionItemPanel']");
+
+
+//.//div[not(@hidden)and@data-accordion-component='AccordionItemPanel']
     /*
 //имя
 public By signInButton = By.className("auth-form__button");
