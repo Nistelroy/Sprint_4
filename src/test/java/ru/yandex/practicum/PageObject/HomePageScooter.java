@@ -10,6 +10,7 @@ import ru.yandex.practicum.ScooterPageElementsLocator;
 import java.util.List;
 
 public class HomePageScooter {
+
     private final WebDriver driver;
     private final ScooterPageElementsLocator elementsLocator = new ScooterPageElementsLocator();
 
@@ -23,10 +24,8 @@ public class HomePageScooter {
     }
 
     public void scrollToList() {
-
         new WebDriverWait(driver, 3)
                 .until(ExpectedConditions.visibilityOf(driver.findElement(elementsLocator.footerList)));
-
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(elementsLocator.footerList));
     }
 
@@ -38,5 +37,8 @@ public class HomePageScooter {
 
     public String getVisibleTextInListAfterClick() {
         return driver.findElement(elementsLocator.footerListVisibleTextAfterClick).getText();
+    }
+    public void clickHeaderOrderButton(){
+        driver.findElement(elementsLocator.headerOrderButton).click();
     }
 }

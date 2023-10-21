@@ -23,42 +23,46 @@ public By footerListPoints = By.xpath(".//div[@data-accordion-component='Accordi
 public By footerList = By.xpath(".//div[@class='Home_FAQ__3uVm4']");
 public By footerListVisibleTextAfterClick = By.xpath(".//div[not(@hidden)and@data-accordion-component='AccordionItemPanel']");
 
-
-//.//div[not(@hidden)and@data-accordion-component='AccordionItemPanel']
-    /*
 //имя
-public By signInButton = By.className("auth-form__button");
+public By nameCountForRent = By.xpath(".//input[@placeholder='* Имя']");
 
 //фамилия
-public By signInButton = By.className("auth-form__button");
+public By lastNameCountForRent = By.xpath(".//input[@placeholder='* Фамилия']");
 
 //адрес
-public By signInButton = By.className("auth-form__button");
+public By addressCountForRent = By.xpath(".//input[@placeholder='* Адрес: куда привезти заказ']");
 
 //станция метро
-public By signInButton = By.className("auth-form__button");
+public By metroCountForRent = By.xpath(".//input[@placeholder='* Станция метро']");
+//все станции
+public By selectMetroCountForRent = By.xpath(".//li[@class='select-search__row']");
 
 //телефон
-public By signInButton = By.className("auth-form__button");
-
+public By phoneNumberCountForRent = By.xpath(".//input[@placeholder='* Телефон: на него позвонит курьер']");
 //далее
-public By signInButton = By.className("auth-form__button");
+public By nextButtonCountForRent = By.xpath("//button[@class='Button_Button__ra12g Button_Middle__1CSJM']");
+
 
 //дата
-public By signInButton = By.className("auth-form__button");
+public By deliveryDate = By.xpath(".//input[@placeholder='* Когда привезти самокат']");
 
 //срок
-public By signInButton = By.className("auth-form__button");
+public By timeOfRentPoint = By.xpath(".//span");
+
+    //срок //срок
+public By timeOfRentList = By.xpath(".//div[@class='Dropdown-option']");
+
 
 //цвет
-public By signInButton = By.className("auth-form__button");
+public By colorBlack = By.id("black");
+public By colorGrey = By.id("grey");
 
 //хотите оформить да
-public By signInButton = By.className("auth-form__button");
+public By orderFinishButton = By.xpath(".//button[(text()='Заказать')and@class='Button_Button__ra12g Button_Middle__1CSJM']");
 
 //заказ оформлен
-public By signInButton = By.className("auth-form__button");
+public By compliantOrderStatus = By.xpath("//*[@id=\"root\"]/div/div[2]/div[5]/div[1]/text()");
 
-     */
+
 
 }
