@@ -30,7 +30,6 @@ public class HomePageScooter {
     }
 
     public void clickToPoint(int numberStringInList) {
-
        List<WebElement> list = driver.findElements(elementsLocator.footerListPoints);
        list.get(numberStringInList-1).click();
     }
@@ -38,7 +37,15 @@ public class HomePageScooter {
     public String getVisibleTextInListAfterClick() {
         return driver.findElement(elementsLocator.footerListVisibleTextAfterClick).getText();
     }
+
     public void clickHeaderOrderButton(){
         driver.findElement(elementsLocator.headerOrderButton).click();
+    }
+
+    public void clickFooterOrderButton(){
+        new WebDriverWait(driver, 3)
+                .until(ExpectedConditions.visibilityOf(driver.findElement(elementsLocator.footerOrderButton)));
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(elementsLocator.footerOrderButton));
+        driver.findElement(elementsLocator.footerOrderButton).click();
     }
 }

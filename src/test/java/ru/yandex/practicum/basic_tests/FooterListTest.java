@@ -7,10 +7,10 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.yandex.practicum.PageObject.HomePageScooter;
 
 import static org.junit.Assert.assertEquals;
-
 
 @RunWith(Parameterized.class)
 public class FooterListTest {
@@ -48,20 +48,20 @@ public class FooterListTest {
     @Test
     public void checkTextInFooterList() {
 
+        //driver = new FirefoxDriver();
+
         driver = new ChromeDriver();
         HomePageScooter homePage = new HomePageScooter(driver);
         homePage.openHomePage();
         homePage.scrollToList();
         homePage.clickToPoint(numberStringInList);
 
-       assertEquals("Текст пункта: '"+numberStringInList+"' в списке 'Вопросы о важном' не совпадает ",
+        assertEquals("Текст пункта: '"+numberStringInList+"' в списке 'Вопросы о важном' не совпадает ",
                textStringInList,homePage.getVisibleTextInListAfterClick());
-
     }
 
     @After
     public void closeDriver(){
        driver.quit();
     }
-
 }
