@@ -1,4 +1,4 @@
-package ru.yandex.practicum.PageObject;
+package ru.yandex.practicum.page_object;
 
 import org.openqa.selenium.WebDriver;
 import ru.yandex.practicum.ScooterPageElementsLocator;

@@ -1,4 +1,4 @@
-package ru.yandex.practicum.basic_tests;
+package ru.yandex.practicum.page_object.basic_tests;
 
 import org.junit.After;
 import org.junit.Test;
@@ -8,7 +8,7 @@ import org.junit.runners.Parameterized.Parameters;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.firefox.FirefoxDriver;
-import ru.yandex.practicum.PageObject.HomePageScooter;
+import ru.yandex.practicum.page_object.HomePageScooter;
 
 import static org.junit.Assert.assertEquals;
 
