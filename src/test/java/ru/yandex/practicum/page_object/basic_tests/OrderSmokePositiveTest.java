@@ -9,7 +9,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.yandex.practicum.page_object.FinalApprovedOrderPage;
-import ru.yandex.practicum.page_object.FinalApprovedOrderPage;
 import ru.yandex.practicum.page_object.HomePageScooter;
 import ru.yandex.practicum.page_object.OrderAboutRentPage;
 import ru.yandex.practicum.page_object.OrderPageFromWhom;
@@ -46,9 +45,9 @@ public class OrderSmokePositiveTest {
 
     @Parameterized.Parameters
     public static Object[][] getTextForList() {
-        return new Object[][] {
+        return new Object[][]{
 
-                {"Дмитрий", "Семечкин", "Пр. Васильевых 54","Сокольники", "99112112313",
+                {"Дмитрий", "Семечкин", "Пр. Васильевых 54", "Сокольники", "99112112313",
                         "20.12.2023", ONE_DAY, "чёрный жемчуг"},
 
                 {"Антонина", "Чветочкова", "Бабушкина 24", "Лубянка", "99119992399",
@@ -58,7 +57,7 @@ public class OrderSmokePositiveTest {
     }
 
     @Before
-    public void resultOrder(){
+    public void resultOrder() {
         orderStatus = "Заказ оформлен";
     }
 
@@ -74,19 +73,19 @@ public class OrderSmokePositiveTest {
         homePage.clickHeaderOrderButton();
 
         OrderPageFromWhom fromWhom = new OrderPageFromWhom(driver);
-        fromWhom.fillAllForm(name,lastName,address,metro,phone);
+        fromWhom.fillAllForm(name, lastName, address, metro, phone);
 
         OrderAboutRentPage aboutRent = new OrderAboutRentPage(driver);
-        aboutRent.fillAllForm(data,timeRent,color);
+        aboutRent.fillAllForm(data, timeRent, color);
 
         FinalApprovedOrderPage finalPage = new FinalApprovedOrderPage(driver);
 
-        assertThat("Оформление заказа не завешено",finalPage.finishOrder(),containsString(orderStatus));
+        assertThat("Оформление заказа не завешено", finalPage.finishOrder(), containsString(orderStatus));
     }
 
     @After
-    public void closeDriver(){
-          driver.quit();
+    public void closeDriver() {
+        driver.quit();
     }
 
 }

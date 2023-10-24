@@ -11,11 +11,12 @@ public class OrderPageFromWhom {
     private WebDriver driver;
     private ScooterPageElementsLocator elementsLocator;
 
-    public OrderPageFromWhom(WebDriver driver){
+    public OrderPageFromWhom(WebDriver driver) {
         this.driver = driver;
         elementsLocator = new ScooterPageElementsLocator();
     }
-    public void fillAllForm(String name, String lastName,String address,String metro, String phone ){
+
+    public void fillAllForm(String name, String lastName, String address, String metro, String phone) {
         fillName(name);
         fillLastName(lastName);
         fillAddress(address);

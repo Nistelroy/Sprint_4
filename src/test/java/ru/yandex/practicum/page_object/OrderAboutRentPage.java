@@ -1,4 +1,5 @@
 package ru.yandex.practicum.page_object;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import ru.yandex.practicum.ScooterPageElementsLocator;
@@ -10,7 +11,7 @@ public class OrderAboutRentPage {
     private WebDriver driver;
     private ScooterPageElementsLocator elementsLocator;
 
-    public OrderAboutRentPage(WebDriver driver){
+    public OrderAboutRentPage(WebDriver driver) {
         this.driver = driver;
         elementsLocator = new ScooterPageElementsLocator();
     }
@@ -38,11 +39,11 @@ public class OrderAboutRentPage {
     private void fillTimeRent(int timeRent) {
         driver.findElement(elementsLocator.timeOfRentPoint).click();
         List<WebElement> list = driver.findElements(elementsLocator.timeOfRentList);
-        if (timeRent<list.size()){
-            list.get(timeRent-1).click();
+        if (timeRent < list.size()) {
+            list.get(timeRent - 1).click();
             return;
         }
-        System.out.println("максимальный срок аренды "+list.size()+" суток");
+        System.out.println("максимальный срок аренды " + list.size() + " суток");
     }
 
 

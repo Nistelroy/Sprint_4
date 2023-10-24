@@ -15,7 +15,7 @@ public class HomePageScooter {
     private final ScooterPageElementsLocator elementsLocator = new ScooterPageElementsLocator();
 
 
-    public HomePageScooter(WebDriver driver){
+    public HomePageScooter(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -26,26 +26,26 @@ public class HomePageScooter {
     public void scrollToList() {
         new WebDriverWait(driver, 3)
                 .until(ExpectedConditions.visibilityOf(driver.findElement(elementsLocator.footerList)));
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(elementsLocator.footerList));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", driver.findElement(elementsLocator.footerList));
     }
 
     public void clickToPoint(int numberStringInList) {
-       List<WebElement> list = driver.findElements(elementsLocator.footerListPoints);
-       list.get(numberStringInList-1).click();
+        List<WebElement> list = driver.findElements(elementsLocator.footerListPoints);
+        list.get(numberStringInList - 1).click();
     }
 
     public String getVisibleTextInListAfterClick() {
         return driver.findElement(elementsLocator.footerListVisibleTextAfterClick).getText();
     }
 
-    public void clickHeaderOrderButton(){
+    public void clickHeaderOrderButton() {
         driver.findElement(elementsLocator.headerOrderButton).click();
     }
 
-    public void clickFooterOrderButton(){
+    public void clickFooterOrderButton() {
         new WebDriverWait(driver, 3)
                 .until(ExpectedConditions.visibilityOf(driver.findElement(elementsLocator.footerOrderButton)));
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",driver.findElement(elementsLocator.footerOrderButton));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", driver.findElement(elementsLocator.footerOrderButton));
         driver.findElement(elementsLocator.footerOrderButton).click();
     }
 }

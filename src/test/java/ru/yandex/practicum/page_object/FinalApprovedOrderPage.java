@@ -8,13 +8,13 @@ public class FinalApprovedOrderPage {
     private WebDriver driver;
     private ScooterPageElementsLocator elementsLocator;
 
-    public FinalApprovedOrderPage(WebDriver driver){
+    public FinalApprovedOrderPage(WebDriver driver) {
         this.driver = driver;
         elementsLocator = new ScooterPageElementsLocator();
     }
 
     public String finishOrder() {
-       driver.findElement(elementsLocator.orderFinishButton).click();
-       return driver.findElement(elementsLocator.compliantOrderStatus).getText();
+        driver.findElement(elementsLocator.orderFinishButton).click();
+        return driver.findElement(elementsLocator.compliantOrderStatus).getText();
     }
 }

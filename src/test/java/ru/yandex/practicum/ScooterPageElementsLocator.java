@@ -1,4 +1,5 @@
 package ru.yandex.practicum;
+
 import org.openqa.selenium.By;
 
 public class ScooterPageElementsLocator {
